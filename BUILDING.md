@@ -28,8 +28,13 @@ npm install -g decktape
 python -m http.server 8000
 ```
 
-3. Use `decktape` to save pdf
+3. Use `decktape` to save pdf.
 
 ```bash
 decktape "http://localhost:3000/index.html?p=slides.md" slides.pdf
 ```
+
+## How to host on github pages?
+
+1. Go to settings.
+2. Enable GitHub Pages.
