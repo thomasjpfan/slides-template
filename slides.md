@@ -8,6 +8,16 @@ class: title-slide
 
 ---
 
+# Here is some code
+
+```python
+import numpy as np
+
+X = np.linspace(0, 10)
+```
+
+---
+
 class: end-slide
 
 # fin.
