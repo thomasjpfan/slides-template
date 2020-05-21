@@ -26,8 +26,13 @@
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 
+    var sourceUrl = getParameterByName("p");
+    if (sourceUrl === null) {
+      sourceUrl = "slides.md";
+    }
+
     var options = {
-      sourceUrl: getParameterByName("p"),
+      sourceUrl: sourceUrl,
       highlightLanguage: "python",
       highlightStyle: "github",
       highlightLines: true,

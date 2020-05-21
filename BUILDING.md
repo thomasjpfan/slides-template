@@ -14,6 +14,12 @@ npm install -g brower-sync
 browser-sync start --server --files "*.*" --startPath "?p=slides.md"
 ```
 
+or
+
+```
+browser-sync start --server --files "*.*"
+```
+
 ## How to save as pdf
 
 1. Install `decktape` with
