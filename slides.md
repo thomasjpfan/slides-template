@@ -27,7 +27,7 @@ X = np.linspace(0, 10)
 
 ---
 
-class: end-slide
+class: chapter-slide
 
 # fin.
 

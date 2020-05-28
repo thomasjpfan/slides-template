@@ -16,7 +16,6 @@ body {
 .remark-slide-content {
     font-size: 1.4em;
     border-top: solid 5px #520b92;
-    vertical-align: middle;
 }
 
 .remark-slide-content h1 {
@@ -53,11 +52,11 @@ body {
 
 a {
     color: #008000;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .italic {
@@ -346,11 +345,11 @@ ul > li > ul > li {
 
 .title-slide {
     vertical-align: middle;
-    font-size: 2.2em;
+    font-size: 1.8em;
     text-align: center;
 }
 
-.end-slide {
+.chapter-slide {
     background-color: #520b92;
     color: white;
     vertical-align: middle;
@@ -358,7 +357,7 @@ ul > li > ul > li {
     text-align: center;
 }
 
-.end-slide h1 {
+.chapter-slide h1 {
     color: white;
 }
 
