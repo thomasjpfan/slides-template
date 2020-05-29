@@ -45,11 +45,6 @@ body {
 
 /* Styles ------------------------------------------------------------------- */
 
-.footnote:before {
-    content: "\2015\2015\2015";
-    display: block;
-}
-
 a {
     color: #008000;
     text-decoration: none;
@@ -126,10 +121,10 @@ ul > li > ul > li {
 
 .footnote {
   position: absolute;
-  bottom: 2em;
-  font-size: 0.5em;
-  opacity: 0.75;
-  margin-left: -5.5em;
+  bottom: 0.5em;
+  font-size: 0.8em;
+  opacity: 0.9;
+  left: 1.5em;
 }
 
 .footnote a{
