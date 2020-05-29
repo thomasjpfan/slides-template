@@ -383,7 +383,7 @@ ul > li > ul > li {
     filter: invert(100%) sepia(57%) saturate(0%) hue-rotate(253deg) brightness(106%) contrast(106%);
 }
 
-table {
+.remark-slide table {
     border: none;
     border-collapse: collapse;
     border-spacing: 0;
@@ -391,14 +391,14 @@ table {
     table-layout: fixed;
 }
 
-table thead {
+.remark-slide table thead {
     border-bottom: 1px solid black;
     vertical-align: bottom;
 }
 
-table tr,
-table th,
-table td {
+.remark-slide table tr,
+.remark-slide table th,
+.remark-slide table td {
     text-align: right;
     vertical-align: middle;
     padding: 0.5em 0.5em;
@@ -408,29 +408,29 @@ table td {
     border: none;
 }
 
-table th {
+.remark-slide table th {
     font-weight: bold;
 }
 
-table tbody tr:nth-child(odd) {
+.remark-slide table tbody tr:nth-child(odd) {
     background: #f5f5f5;
 }
 
-table tbody tr:hover {
+.remark-slide table tbody tr:hover {
     background: rgba(66, 165, 245, 0.2);
 }
 
-table.alternationg{
+.remark-slide table.alternationg{
     border: none;
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-table.alternating td, table.alternating tr {
+.remark-slide table.alternating td, .remark-slide table.alternating tr {
     border: none;
 }
 
-table.alternating tbody tr:nth-child(odd) {
+.remark-slide table.alternating tbody tr:nth-child(odd) {
     background: #f0f0f0;
 }
 
