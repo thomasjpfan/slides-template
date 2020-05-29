@@ -6,9 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
   <script src="./assets/remark.min.js"></script>
-
   <!-- <link rel="stylesheet" href="./assets/katex.min.css">
   <script src="./assets/katex.min.js"></script>
   <script src="./assets/auto-render.min.js"></script> -->
@@ -26,10 +24,10 @@
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
-
     var sourceUrl = getParameterByName("p");
+
     if (sourceUrl === null) {
-      sourceUrl = "index.md";
+      sourceUrl = "slides.md";
     }
 
     var options = {
