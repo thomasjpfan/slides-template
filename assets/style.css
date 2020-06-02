@@ -18,6 +18,10 @@ body {
     padding: 1.3em 2.5em 1em 2.5em;
 }
 
+.remark-slide-content p {
+    margin: 0.5em 0;
+}
+
 .remark-slide-content h1 {
     font-weight: bold;
     font-size: 2em;
