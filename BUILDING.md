@@ -11,12 +11,6 @@ npm install -g brower-sync
 2. Start `brower-sync`
 
 ```
-browser-sync start --server --files "*.*" --startPath "?p=slides.md"
-```
-
-or
-
-```
 browser-sync start --server --files "*.*"
 ```
 
@@ -37,7 +31,7 @@ python -m http.server 8000
 3. Use `decktape` to save pdf.
 
 ```bash
-decktape "http://localhost:3000/index.html?p=slides.md" slides.pdf
+decktape "http://localhost:3000/index.html" slides.pdf
 ```
 
 ## How to host on github pages?
