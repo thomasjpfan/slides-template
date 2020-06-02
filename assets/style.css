@@ -15,6 +15,7 @@ body {
 .remark-slide-content {
     border-top: solid 5px #520b92;
     font-size: 1.4em;
+    padding: 1.5em 3em 1em 3em;
 }
 
 .remark-slide-content h1 {
