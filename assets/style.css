@@ -14,31 +14,27 @@ body {
 
 .remark-slide-content {
     border-top: solid 5px #520b92;
-    font-size: 1.5em;
-    padding: 1.3em 2.5em 1em 2.5em;
-}
-
-.remark-slide-content p {
-    margin: 0.5em 0;
+    font-size: 1.6em;
+    padding: 1.1em 2.2em;
 }
 
 .remark-slide-content h1 {
     font-weight: bold;
-    font-size: 2em;
-    margin: 0 0 .5em 0;
+    font-size: 1.7em;
+    margin: 0 0 0.5em 0;
     color: #520b92;
 }
 
 .remark-slide-content h2 {
     font-weight: bold;
-    font-size: 1.5em;
-    margin: 0 0 .5em 0;
+    font-size: 1.3em;
+    margin: 0 0 0.5em 0;
 }
 
 .remark-slide-content h3 {
-    font-weight: normal;
-    font-size: 1.2em;
-    margin: 0 0 .5em 0;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
 }
 
 .remark-slide-number {
@@ -424,6 +420,13 @@ strong {
 
 .remark-slide table.alternating tbody tr:nth-child(odd) {
     background: #f0f0f0;
+}
+
+.remark-slide code {
+    white-space: nowrap;
+    background: #eee;
+    padding: .2em;
+    border-radius: 0.2em;
 }
 
 /* grid */
