@@ -423,7 +423,6 @@ strong {
 }
 
 .remark-slide code {
-    white-space: nowrap;
     background: #eee;
     padding: .2em;
     border-radius: 0.2em;
