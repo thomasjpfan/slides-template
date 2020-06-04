@@ -2,6 +2,8 @@
 
 # What is the workflow for developing new slides?
 
+0. This is not needed, you can reload the browser manually to get updates.
+
 1. Install `browser-sync` with
 
 ```bash
