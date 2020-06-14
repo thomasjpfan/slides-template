@@ -4,16 +4,13 @@
 
 0. This is not needed, you can reload the browser manually to get updates.
 
-1. Install `browser-sync` with
+1. Comment or uncomment katex in `index.html` and change the title.
+
+2. Install `browser-sync` with and start while wathcing all files
 
 ```bash
 npm install -g brower-sync
-```
-
-2. Start `brower-sync`
-
-```
-browser-sync start --server --files "*.*"
+browser-sync start --server -w
 ```
 
 ## How to save as pdf
