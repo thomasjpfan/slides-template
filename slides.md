@@ -1,6 +1,8 @@
+title: This is the title
+use_katex: True
 class: title-slide
 
-# This is a title for a presentation With more than one line wow
+# This is a title for a presentation With more than one line
 
 .larger[Thomas J. Fan]<br>
 @thomasjpfan<br>
@@ -38,11 +40,21 @@ class: middle
 
 ---
 
+# This is an image
+
+![:scale 30%](images/favicon_org.png)
+
+$$
+F=ma
+$$
+
+---
+
 # This is huge
 
 .grid.grid-around[
 .grid-8.success.bold.center[
-    This is awesome
+    This is wowowowow
 ]]
 
 ## Here is some numpy

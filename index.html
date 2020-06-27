@@ -6,50 +6,141 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <!-- <link rel="stylesheet" href="./assets/katex.min.css">
-  <script src="./assets/katex.min.js"></script>
-  <script src="./assets/auto-render.min.js"></script> -->
+  
+    <link rel="stylesheet" href="./assets/katex.min.css">
+    <script src="./assets/katex.min.js"></script>
+    <script src="./assets/auto-render.min.js"></script>
+  
 </head>
 
 <body>
-  <textarea id="source"></textarea>
+  <textarea id="source">title: This is the title
+use_katex: True
+class: title-slide
+
+# This is a title for a presentation With more than one line
+
+.larger[Thomas J. Fan]<br>
+@thomasjpfan<br>
+<a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github icon-left"></span></a>
+<a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter"></span></a>
+<a class="this-talk-link", href="https://github.com/thomasjpfan/slides-template" target="_blank">
+This talk on Github: thomasjpfan/slides-template</a>
+
+---
+
+class: middle, center
+
+# Before we start :)
+
+.grid[
+.grid-6[.success.bold.center[
+    If you are from NYC, **Push 1**.
+]]
+
+.grid-6[.alert.bold.center[
+    Otherwise, **Push 2**.
+]]
+]
+
+---
+
+class: middle
+
+> Creativity is just connecting things. When you ask creative people how they did something,
+> they feel a little guilty because they didn't really do it, they just saw something.
+> It seemed obvious to them after a while. That's because they were able to connect
+> experiences they've had and synthesize new things.
+>
+> <cite>Steve Jobs</cite>
+
+---
+
+# This is an image
+
+![:scale 30%](images/favicon_org.png)
+
+$$
+F=ma
+$$
+
+---
+
+# This is huge
+
+.grid.grid-around[
+.grid-8.success.bold.center[
+    This is wowowowow
+]]
+
+## Here is some numpy
+
+```py
+>>> df['int_1'].values
+array([     0,      1,      2, ..., 999997, 999998, 999999])
+```
+
+
+---
+
+# Here is some code
+
+```python
+import numpy as np
+
+X = np.linspace(0, 10)
+```
+
+- This is a [link](https://thomasjpfan.com)
+
+---
+
+# Here is a table
+
+| train has infreq | error  | ignore            | infreq_ignore       |   |
+|------------------|--------|-------------------|---------------------|---|
+| True             | errors | all zeros (werid) | place in infreq bin |   |
+| False            | errors | all zeros         | all zeros           |   |
+
+---
+
+class: chapter-slide
+
+# Thank you!
+
+.larger[Thomas J. Fan]<br>
+@thomasjpfan<br>
+<a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github-white icon-left"></span></a>
+<a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter-white"></span></a>
+<a class="this-talk-link", href="https://github.com/thomasjpfan/slides-template" target="_blank">
+This talk on Github: thomasjpfan/slides-template</a>
+</textarea>
   <script src="./assets/remark.min.js"></script>
-  <script type="text/javascript">
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    var sourceUrl = getParameterByName("p");
-
-    if (sourceUrl === null) {
-      sourceUrl = "slides.md";
-    }
-
+  <script>
     var options = {
-      sourceUrl: sourceUrl,
       ratio: '16:9',
       highlightLanguage: "python",
       highlightStyle: "github",
       highlightLines: true,
       slideNumberFormat: '',
     };
-    // var renderMath = function () {
-    //   renderMathInElement(document.body, {
-    //     delimiters: [
-    //       { left: "$$", right: "$$", display: true },
-    //       { left: "$", right: "$", display: false },
-    //       { left: "\\[", right: "\\]", display: true },
-    //       { left: "\\(", right: "\\)", display: false },
-    //     ]
-    //   });
-    // }
-    // var slideshow = remark.create(options, renderMath);
-    var slideshow = remark.create(options);
+    remark.macros['scale'] = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+    };
+    
+    var renderMath = function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false },
+        ]
+      });
+    }
+    var slideshow = remark.create(options, renderMath);
+    
   </script>
 </body>
 

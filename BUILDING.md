@@ -1,39 +1,26 @@
 # FAQ
 
-# What is the workflow for developing new slides?
+## How do I build slides?
 
-0. This is not needed, you can reload the browser manually to get updates.
+Install the dependencies: `pip install -r requirements.txt`.
 
-1. Comment or uncomment katex in `index.html` and change the title.
-
-2. Install `browser-sync` with and start while wathcing all files
-
-```bash
-npm install -g brower-sync
-browser-sync start --server -w
+```py
+python build.py build
 ```
 
-## How to save as pdf
+Remember to rebuild when `slides.md` get updated.
 
-1. Install `decktape` with
+## How do I develop and live reload?
 
-```bash
-npm install -g decktape
-```
-
-2. Make sure `brower-sync` or another http server method is used:
-
-```bash
-python -m http.server 8000
-```
-
-3. Use `decktape` to save pdf.
-
-```bash
-decktape "http://localhost:3000/index.html" slides.pdf
+```py
+python run.py live
 ```
 
 ## How to host on github pages?
 
 1. Go to settings.
 2. Enable GitHub Pages.
+
+## How to change my favicon?
+
+Replace favicon with something else
