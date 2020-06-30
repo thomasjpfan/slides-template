@@ -24,3 +24,17 @@ python run.py live
 ## How to change my favicon?
 
 Replace favicon with something else
+
+## How to save as pdf?
+
+1. Install decktape
+
+```bash
+npm install -g decktape
+```
+
+2. Run decktape
+
+```bash
+decktape "http://localhost:5500" slides.pdf
+```
