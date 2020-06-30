@@ -1,6 +1,6 @@
 # Template for Slides
 
-[Here is a sample](https://thomasjpfan.github.io/slides-template/?p=slides.md)
+[Here is a sample](https://thomasjpfan.github.io/slides-template/)
 
 # License
 
