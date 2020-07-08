@@ -5,7 +5,7 @@
 Install the dependencies: `pip install -r requirements.txt`.
 
 ```py
-python build.py build
+python make.py build
 ```
 
 Remember to rebuild when `slides.md` get updated.
@@ -13,7 +13,7 @@ Remember to rebuild when `slides.md` get updated.
 ## How do I develop and live reload?
 
 ```py
-python run.py live
+python make.py live
 ```
 
 ## How to host on github pages?
