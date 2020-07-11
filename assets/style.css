@@ -2,7 +2,7 @@ body {
     font-family: Helvetica, sans-serif;
     color: #354046;
     line-height: 1.4;
-    font-size: 12pt;
+    font-size: 16pt;
     word-wrap: break-word;
 }
 
@@ -14,25 +14,25 @@ body {
 }
 
 .remark-slide-content {
-    font-size: 1.4em;
+    font-size: 1em;
     border-top: solid 5px #520b92;
 }
 
 .remark-slide-content h1 {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0 0 .5em 0;
     color: #520b92;
 }
 
 .remark-slide-content h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: bold;
     margin: 0 0 .5em 0;
 }
 
 .remark-slide-content h3 {
-    font-size: 1.0em;
+    font-size: 1.1em;
     font-weight: normal;
     margin: 0 0 .5em 0;
 }
@@ -178,7 +178,7 @@ ul > li > ul > li {
 /* Specials ----------------------------------------------------------------- */
 
 .title-slide {
-    font-size: 1.8em;
+    font-size: 1.2em;
     text-align: center;
     vertical-align: middle;
 }
@@ -192,7 +192,7 @@ ul > li > ul > li {
     background-color: #520b92;
     color: white;
     vertical-align: middle;
-    font-size: 1.8em;
+    font-size: 1.2em;
     text-align: center;
 }
 
