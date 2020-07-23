@@ -158,25 +158,16 @@ ul > li > ul > li {
     padding: 1em;
 }
 
-.hljs-github .hljs-comment, .hljs-github .hljs-quote {
-    color: #8e4a10;
+.hljs-monokai .hljs-comment {
+    color: #a18e35;
 }
 
-.hljs-github .hljs {
-    padding: 0.4em;
+.remark-code-line-highlighted {
+    background-color: #373832;
 }
-
-
-/* Placement ---------------------------------------------------------------- */
-
-.pull-left {
-    float: left;
-    margin-right: 1em;
-}
-
-.pull-right {
-    float: right;
-    margin-left: 1em;
+code {
+  background: #e7e8e2;
+  border-radius: 5px;
 }
 
 /* Specials ----------------------------------------------------------------- */

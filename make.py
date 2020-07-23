@@ -1,6 +1,7 @@
 import argparse
 from jinja2 import Template
 from livereload import Server
+from pathlib import Path
 
 
 def build():
@@ -43,9 +44,12 @@ def build():
 
 def live():
     print("Serving index.html")
+    cur_dir = Path('.')
+
     server = Server()
     server.watch("slides.md", build)
-    server.serve(open_url_delay=3)
+    server.watch(str(cur_dir / 'assets' / "style.css"))
+    server.serve(open_url_delay=2)
 
 
 if __name__ == '__main__':
