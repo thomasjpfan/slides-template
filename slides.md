@@ -17,12 +17,12 @@ class: middle, center
 
 # Before we start :)
 
-.grid[
-.grid-6[.success.bold.center[
+.g[
+.g-6[.success.bold.center[
     If you are from NYC, **Push 1**.
 ]]
 
-.grid-6[.alert.bold.center[
+.g-6[.alert.bold.center[
     Otherwise, **Push 2**.
 ]]
 ]
@@ -53,15 +53,15 @@ $$
 
 # This is some code
 
-.grid[
-.grid-6[
+.g[
+.g-6[
 ```python
 # This is a comment
 def hello(a, b):
     return a + b
 ```
 ]
-.grid-6[
+.g-6[
 
 ```ruby
 def add(a, b)
@@ -75,8 +75,8 @@ end
 
 # This is huge
 
-.grid.grid-around[
-.grid-8.success.bold.center[
+.g.g-around[
+.g-8.success.bold.center[
     This is wowowowow
 ]]
 
@@ -92,11 +92,11 @@ array([     0,      1,      2, ..., 999997, 999998, 999999])
 
 # Here is some code
 
-.grid[
-.grid-4[
+.g[
+.g-4[
 This is a [link](https://thomasjpfan.com) about something interesting here
 ]
-.grid-8[
+.g-8[
 ```python
 import numpy as np
 
