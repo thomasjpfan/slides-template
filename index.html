@@ -6,11 +6,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+  
   <link rel="stylesheet" href="./assets/katex.min.css">
   <script src="./assets/katex.min.js"></script>
   <script src="./assets/auto-render.min.js"></script>
-
+  
 </head>
 
 <body>
@@ -91,11 +91,10 @@ end
 
 # This is huge
 
-.g[
-.g-12[
-.success.bold.center[
+.g.g-around[
+.g-8.success.bold.center[
     This is wowowowow
-]]]
+]]
 
 ## Here is some numpy
 
@@ -134,14 +133,14 @@ X = np.linspace(0, 10)
 
 ---
 
-class: chapter-slide
+class: title-slide
 
 # Thank you!
 
 .larger[Thomas J. Fan]<br>
 @thomasjpfan<br>
-<a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github-white icon-left"></span></a>
-<a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter-white"></span></a>
+<a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github icon-left"></span></a>
+<a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter"></span></a>
 <a class="this-talk-link", href="https://github.com/thomasjpfan/slides-template" target="_blank">
 This talk on Github: thomasjpfan/slides-template</a>
 </textarea>
@@ -155,10 +154,10 @@ This talk on Github: thomasjpfan/slides-template</a>
       slideNumberFormat: '',
     };
     remark.macros['scale'] = function (percentage) {
-      var url = this;
-      return '<img src="' + url + '" style="width: ' + percentage + '" />';
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
     };
-
+    
     var renderMath = function () {
       renderMathInElement(document.body, {
         delimiters: [
@@ -170,7 +169,7 @@ This talk on Github: thomasjpfan/slides-template</a>
       });
     }
     var slideshow = remark.create(options, renderMath);
-
+    
   </script>
 </body>
 
