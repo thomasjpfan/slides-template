@@ -7,7 +7,9 @@ from pathlib import Path
 def build():
     print("building index.html")
 
-    with open("index.html.jinja", 'r') as f:
+    assets = Path("assets")
+
+    with (assets / "index.html.jinja").open('r') as f:
         template = Template(f.read())
 
     with open("slides.md", 'r') as f:
@@ -17,9 +19,11 @@ def build():
     valid_metadata_keys = set(['title', 'use_katex'])
     metadata = {}
     for line in slides:
+
+        # first title
         if line.startswith("#") or len(metadata) == len(valid_metadata_keys):
             break
-        line_split = line.split(":")
+        line_split = line.split(":", maxsplit=1)
         if len(line_split) != 2:
             continue
 
