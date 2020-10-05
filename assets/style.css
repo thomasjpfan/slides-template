@@ -14,27 +14,32 @@ body {
 }
 
 .remark-slide-content {
-    font-size: 1em;
+    font-size: 1.2rem;
     border-top: solid 5px #520b92;
 }
 
 .remark-slide-content h1 {
     font-weight: bold;
-    font-size: 1.8em;
+    font-size: 2.5rem;
     margin: .1em 0 .5em 0;
     color: #520b92;
 }
 
 .remark-slide-content h2 {
-    font-size: 1.3em;
+    font-size: 2rem;
     font-weight: bold;
     margin: 0 0 .5em 0;
 }
 
 .remark-slide-content h3 {
-    font-size: 1.1em;
+    font-size: 1.7rem;
     font-weight: normal;
     margin: 0 0 .5em 0;
+}
+
+.remark-slide-content p, .remark-slide-content li{
+  line-height: 1.5;
+  font-size: 1.6rem;
 }
 
 .remark-slide-number {
@@ -91,10 +96,6 @@ strong {
     color: white;
 }
 
-.remark-code {
-    font-size: 0.9em;
-}
-
 ul > li, ol > li {
   margin: 0.3em 0;
 }
@@ -104,14 +105,18 @@ li > p {
 }
 
 ul > li > ul > li {
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .caption {
     display: block;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-style: italic;
+}
+
+img {
+  max-width: 100%;
 }
 
 .circle img {
@@ -123,16 +128,16 @@ ul > li > ul > li {
     height: auto;
 }
 
+.footnote a{
+    color: #0288d1; /*#20707e;*/
+}
+
 .footnote {
   position: absolute;
   bottom: 0.5em;
-  font-size: 0.8em;
+  font-size: 0.7rem;
   opacity: 0.9;
-  left: 1.5em;
-}
-
-.footnote a{
-    color: #0288d1; /*#20707e;*/
+  right: 1.5em;
 }
 
 .inactive {
@@ -173,7 +178,6 @@ code {
 /* Specials ----------------------------------------------------------------- */
 
 .title-slide {
-    font-size: 1.2em;
     text-align: center;
     vertical-align: middle;
 }
@@ -186,7 +190,6 @@ code {
     background-color: #520b92;
     color: white;
     vertical-align: middle;
-    font-size: 1.2em;
     text-align: center;
 }
 
@@ -208,7 +211,7 @@ code {
 }
 
 .this-talk-link {
-    font-size: 0.8em;
+    font-size: 1.3rem;
     display: block;
     font-style: italic;
     margin-top: 1em;
@@ -216,7 +219,7 @@ code {
 
 
 blockquote{
-  font-size: 1.4em;
+  font-size: 1rem;
   width:75%;
   margin:0 auto;
   font-style:italic;
@@ -233,7 +236,7 @@ blockquote::before{
   font-family:Arial;
   content: "\201C";
   color:#008000;
-  font-size:4em;
+  font-size:4rem;
   position: absolute;
   left: 0;
   top:-10px;
