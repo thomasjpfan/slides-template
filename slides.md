@@ -45,6 +45,10 @@ class: middle
 
 ![:scale 40%](images/favicon_org.png)
 
+---
+
+# This is a equation
+
 $$
 F=ma
 $$
