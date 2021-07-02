@@ -1,4 +1,4 @@
-# Template for Slides
+# Template for Slides + Remark
 
 [Link to slides](https://thomasjpfan.github.io/slides-template/)
 
