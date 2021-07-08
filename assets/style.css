@@ -17,6 +17,7 @@ body {
     font-size: 1em;
     border-top: solid 5px #520b92;
     padding-top: 0.5em;
+    vertical-align: middle;
 }
 
 .remark-slide-content h1 {
