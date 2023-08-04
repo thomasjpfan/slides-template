@@ -5,11 +5,8 @@ class: title-slide
 # This is a title for a presentation With more than one line
 
 .larger[Thomas J. Fan]<br>
-@thomasjpfan<br>
-<a href="https://www.github.com/thomasjpfan" target="_blank"><span class="icon icon-github icon-left"></span></a>
-<a href="https://www.twitter.com/thomasjpfan" target="_blank"><span class="icon icon-twitter"></span></a>
-<a class="this-talk-link", href="https://github.com/thomasjpfan/slides-template" target="_blank">
-This talk on Github: thomasjpfan/slides-template</a>
+<a href="https://www.github.com/thomasjpfan" target="_blank" class="title-link"><span class="icon icon-github right-margin"></span>@thomasjpfan</a>
+<a class="this-talk-link", href="https://github.com/thomasjpfan/slides-template" target="_blank">github.com/thomasjpfan/slides-template</a>
 
 ---
 
