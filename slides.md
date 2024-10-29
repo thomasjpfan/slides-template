@@ -209,6 +209,9 @@ def add(x: int, y: int):
 
 - `def` : Call from Python
 - `cdef` : Call from Cython
+- `cpdef` : Call from Python & Cython
+
+--
 
 ```python
 *cdef float linear(slope: float, x: float, b: float):
@@ -441,6 +444,34 @@ def _make_unique(...):
 
 ---
 
+# Const memoryviews
+## Support readonly data
+
+```python
+cpdef floating _inertia_dense(
+*       const floating[:, ::1] X,           # IN
+*       const floating[::1] sample_weight,  # IN
+        const floating[:, ::1] centers,     # IN
+        const int[::1] labels,              # IN
+        int n_threads,
+        int single_label=-1,
+):
+```
+`KMeans`, `BisectingKMeans`
+
+.footnote[
+[Source](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/_k_means_common.pyx#L94-L101)
+]
+
+---
+
+# Const memoryviews
+## Support readonly data - Use case
+
+<!-- Show readonly with SuccessiveHalving -->
+
+---
+
 # Structs
 
 ```python
@@ -490,18 +521,91 @@ https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/ensemble/_hist_gr
 
 https://numpy.org/doc/stable/user/basics.rec.html
 
+
 ---
 
 # "Cython classes": Extension Types
 
 ```python
+cdef class Tree:
+	cdef public intp_t n_features
+	cdef intp_t* n_classes
+	cdef public intp_t n_outputs
+	...
+	cdef Node* nodes
+	cdef float64_t* value
 ```
+
+- `DecisionTree{Regressor,Classifier}`
+- `RandomForest{Regressor,Classifier}`
+- `GradientBoosting{Regressor,Classifier}`
 
 https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pxd#L36-L54
 
 ---
 
+# "Cython classes": Extension Types
+
+```python
+cdef class Tree:
+    def __cinit__(self, intp_t n_features, cnp.ndarray n_classes, intp_t n_outputs):
+        safe_realloc(&self.n_classes, n_outputs)
+		...
+
+	cdef int _resize_c(self, intp_t capacity=INTPTR_MAX) except -1 nogil:
+		...
+        safe_realloc(&self.nodes, capacity)
+
+    def __dealloc__(self):
+        free(self.n_classes)
+		free(self.nodes)
+		...
+```
+
+https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/_tree.pyx#L783
+
+---
+
 # Releasing the GIL
+## What is the GIL?
+
+---
+
+# Why Release the GIL
+
+```python
+trees = Parallel(
+	n_jobs=self.n_jobs,
+	verbose=self.verbose,
+	prefer="threads",
+)(
+	delayed(_parallel_build_trees)(...)
+```
+
+- `RandomForest{Classifier,Regressor}`
+
+---
+
+# Releasing the Gil in Cython
+
+
+```python
+*with nogil:
+	builder_stack.push(...)
+	...
+	node_id = tree._add_node(...)
+	splitter.node_value(...)
+```
+
+https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/_tree.pyx#L213
+
+---
+
+# nogil in function definition
+
+```python
+
+```
 
 ---
 
@@ -520,27 +624,81 @@ https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/utils/_fast_dic
 
 ---
 
-- Cython 101
-	- Directives
 - Scikit-learn Use Cases
 	- Python <-> Cython interaction
 		- Release GIL
+			- context manager syntax
+				- _tree.pyx
+			- nogil in function def
+				- _splitter.pxd
 	- Performance
+		- nan check
 		- prange (openmp)
-		- Import NumPy API
+			- Simple example
+				- _binning.pyx
+			- Compiler flag
+				- Openmp flag
+		- ~~Import NumPy C API~~
+			- Cimport numpy as cnp
+				- Import_array
 		- Calling SciPy BLAS directly
-		- C++
+			- Calling external functions
+		- C+
+			- RAI
+				- shared pointer
+				- Smart pointet
+			- Map
+				- Intfloatdict
+				- Hirearchical_fast
+			- Algorithm
+				- _tree.pyx
+			- Vector
+				- Dbscan_inner
+				- Memoryview wrapping
+				- haahing_fast
+				- _vector_sentinel.pyx
 	- DRY
 		- Pyd files
+			- cimport from other files
 		- Fused Types
+			- Generics
+				- simple function
+				- Memoryview
+			- with C++
+				- Vector
 		- Tempita for generating
-		- Pyi files
-- Alternatives
+			- Extension types for “fused”
+			- Weight vector
+		 - Vtable lookup
+			 - Final
+				 - pairwise reduction
+			 - pyi files
+				 - Binary tree
+			 - Tempita generation
+				 - Loss
+			 - Fused types with extension array
+				 - Tree partition
+ - Review slide for performance uplift - peak of talk
+	- Lightgbm like performance
+	- Pairwise reduction normal
+	- Pairwise reduction class mode
+	- Loss - linear models
+	-  memory improvements
+		- Nan check
+		- intfloatdict
+		-
+ - Review slide on Cython features
+	 - World cloud
+- Conclusion
+
+Move profiling tools to appendix
+Alternatives
 	- Rust -> PyO3
 	- C++ -> nanobind and pybind11
 	- Numba -> JIT
 	- PyTorch -> torch.compile
-- Conclusion
+		- 2.5 had been cpu generation
+
 
 ---
 
